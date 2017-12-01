@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Blood Request</title>
+</head>
+<body>
+     <div class="container">
+         <a href="/">Home/</a>
+         <a href="/hospital">Hospital-View</a>
+         <h1>Submit A Request</h1>
+         <form action="/hospital/request" method="POST">
+             <label for="">Blood Bank</label>
+             <select name="bank_name" id="">
+                 <option value="Langara">Langara</option>
+             </select>
+             <label for="">Blood Type Needed</label>
+             <select name="bloodType" id="">
+                 <option value="A+">A+</option>
+                 <option value="A-">A-</option>
+                 <option value="B+">B+</option>
+                 <option value="B-">B-</option>
+                 <option value="O+">O+</option>
+                 <option value="O-">O-</option>
+                 <option value="AB+">AB+</option>
+                 <option value="AB-">AB-</option>
+             </select>
+             <input type="number" name="units" id="" placeholder="Units Required" >
+             <input type="submit" value="Submit">
+         </form>
+    </div>    
+</body>
+</html>

@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400|Source+Sans+Pro:300,400|family=Lora');
+body {
+    /* background-color:#2A2B2E; */
+    margin-top: 0;
+    /* background-color: #2A2B2E; */
+}
+
+.container {
+    background-color:#38618C;
+    max-width: 1200px;
+    margin: 50px auto;
+    margin-top: 0px;
+    /* color :#313638; */
+    color : white;
+    font-family: 'Source Sans Pro', sans-serif;
+    /* border: 1px solid #ffffff; */
+    min-height: 85vh;
+    padding: 20px;
+    /* border-radius: 10px; */
+    box-shadow: 0px 5px 12.5px #2A2B2E;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', serif;
+    font-weight: normal;
+    padding: 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h1 {
+    text-align: center;
+    /* color : #FFD166; */
+    color: white;
+    font-size: 2.25rem;
+    /* border-bottom: 1px solid black; */
+}
+
+p {
+    text-align: center;
+}
+
+a, a:visited {
+    color: #FF5964;
+    /* color : #ffffff; */
+}
+
+nav {
+    margin : 0 auto; 
+    max-width: 700px;
+   /* background-color: red; */
+}
+
+nav ul {
+   list-style-type: none;
+   padding-left: 0;
+   /* width: 50%; */
+   margin: 0 auto;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+nav ul li {
+    flex-basis: 40%;
+    /* flex-grow: 1; */
+/* background-color: blue; */
+/* margin: 10px 0; */
+text-align: center;
+padding : 15px 0;
+margin: 15px 10px;
+background-color:#ffffff;
+transition: transform 1s;
+/* box-shadow: 2.5px 5px 5px #ffffff; */
+}
+
+nav ul li:hover{
+    transform: scale(1.1, 1.1);
+    /* background-color: #38618C; */
+} 
+
+ li a, li a:visited {
+    font-size: 1.5rem;
+    color:#38618C;
+    text-decoration: none;
+    display: block;
+    transition: color 1s;
+}
+
+/* li:hover a {
+   
+    color : #ffffff;
+} */
+
+
+table {
+    /* text-align: center; */
+    margin : 10px auto;
+    text-align: center;
+    /* background-color: white; */
+    color : #ffffff;
+    margin-top: 60px;
+}
+
+table, tr, th, td {
+    border: 1px solid #ffffff;
+    border-collapse: collapse;
+}
+
+/* tr:nth-of-type(2n) {
+ background-color: #FFFFFF;
+ color : #38618C;
+} */
+
+table tr td, table tr th {
+    padding: 10px;
+}
+
+tr input[type="text"], tr input[type="number"] {
+    text-align: center;
+    background-color: #38618C;
+    color : white;
+    border: none;
+}
+
+tr input[type="submit"] {
+    cursor: pointer;
+    background-color: #38618C;
+    color: #FF5964;
+    border: none;
+    text-decoration: underline;
+}
+
+form {
+    text-align: center;
+    margin : 10px auto;
+    
+}
+
+form * {
+    height : 30px;
+    width : 175px;
+    display: block;
+    text-align: left;
+    margin: 0px auto;
+    margin-bottom: 15px;
+}
+
+form select {
+    text-align: center;
+}
+
+form select option {
+    text-align: center;
+    height : 30px;
+    text-align: center;
+}
+
+form p {
+    margin-top: 20px;
+}
+
+form label {
+   margin-top: 20px;
+}
+
+form input {
+}
+
+form input[type="submit"] {
+    display: block;
+    width : 75px;
+    height : 30px;
+    margin:  0px auto;
+    margin-top: 20px; 
+    background-color: white;
+    box-shadow: none;
+    border: none;
+    /* border: 1px solid #313638; */
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.page-navigation {
+    text-align: center;
+}
+
+.page-navigation a {
+    margin: 0 2px;
+    display: inline-block;
+    padding: 3px 5px;
+    color: #ffffff;
+    background-color: #38618C;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+  }
+   
+  .page-navigation a[data-selected] {
+    color: #38618C;
+    background-color:white ;
+  }
+
+  form#donor-search {
+      /* display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-content: center;
+      align-items: space-between;
+      flex-wrap: wrap; */
+  }
+
+  form#donor-search * {
+      /* align-self: center; */
+  }
+
+  form#donor-search input[type="submit"] {
+      /* flex-basis: 100%; */
+  }

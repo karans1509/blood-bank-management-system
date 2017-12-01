@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <title>Add donation</title>
+</head>
+
+<body>
+    <div class="container">
+        <a href="/">Home / </a>
+        <a href="/receptionist">Receptionist-View</a>
+        <h1>Add donation details</h1>
+        <form action="/receptionist/add-donation" method="POST">
+            <input type="text" name="d_name" list="donors" id="" placeholder="Enter Name">
+            <datalist id="donors">
+                    {{#each donorNames}}
+                    <option value=" {{d_name}} " selected> {{d_name}} </option>
+                    {{/each}}
+            </datalist>
+            <!-- <select name="d_name" id="" required>
+                {{#each donorNames}}
+                <option value=" {{d_name}} " selected> {{d_name}} </option>
+                {{/each}}
+            </select> -->
+            <input type="number" name="units" placeholder="Units" required>
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#donors').css('display', 'none');
+        })
+    </script>
+
+</body>
+
+</html>

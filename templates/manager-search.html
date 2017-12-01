@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Search</title>
+</head>
+
+<body>
+    <div class="container">
+        <a href="/">Home / </a>
+        <a href="/manager">Manager-View / </a>
+        <h1>Search for an Employee</h1>
+        <form action="/manager/search" method="POST">
+            <!-- <select name="empName" id="" required>
+                <option value="All">All</option>
+                {{#each employees}}
+                <option value=" {{empName}} " selected> {{empName}} </option>
+                {{/each}}
+            </select> -->
+            <label for="">Search by Name</label>
+            <input type="text" placeholder="Enter a name" name="empName">
+            <p>OR</p>
+            <label for="">Search by Designation</label>
+            <select name="position" id="">
+                <option value="All">All</option>
+                <option value="Manager">Manager</option>
+                <option value="Receptionist">Receptionist</option>
+                <option value="Staff">Staff</option>
+            </select>
+            <input type="submit" value="Submit">
+        </form>
+
+        {{#if emp}}
+        <div id="details">
+            <h3>Details</h3>
+            <table>
+                <tr>
+                    <th>Employee Id</th>
+                    <th>Employee Name</th>
+                    <th>Position</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Blood Bank No.</th>
+                    <th></th>
+                </tr>
+
+                {{#each emp}}
+                <tr>
+                    <td>
+                        <input type="text" value="{{empId}}" disabled="true"> </td>
+                    <td> {{empName}} </td>
+                    <td> {{position}} </td>
+                    <td> {{empAddress}} </td>
+                    <td> {{empPhone}} </td>
+                    <td> {{empEmail}} </td>
+                    <td> {{bno}} </td>
+                    <td>
+                        <a href="/manager/edit/{{empId}}">
+                            <input type="submit" value="Edit">
+                        </a>
+                    </td>
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+        {{else}}
+        <p>No records found</p>
+        {{/if}}
+
+    </div>
+</body>
+
+</html>

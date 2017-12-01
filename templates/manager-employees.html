@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Employees</title>
+</head>
+<body>
+    <div class="container">
+            <a href="/">Home / </a>
+            <a href="/manager">Manager-View</a>
+            <h1>All Employees</h1>
+            <table> 
+                <tr>
+                    <th>Employee Id</th>
+                    <th>Employee Name</th>
+                    <th>Position</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Blood Bank No.</th>
+                    <th></th>
+                </tr>
+                {{#each employees}}
+                <form action="">
+                        <tr>
+                                <td> <input type="text" value="{{empId}}" disabled ="true"> </td>
+                                <td> {{empName}} </td>
+                                <td> {{position}} </td>
+                                <td> {{empAddress}} </td>
+                                <td> {{empPhone}} </td>
+                                <td> {{empEmail}} </td>
+                                <td> {{bno}} </td>
+                                <td> <a href=""> <input type="submit" value="Edit"></a></td>
+                            </tr>
+                </form>
+                {{/each}}
+            </table>
+    </div>
+</body>
+</html>

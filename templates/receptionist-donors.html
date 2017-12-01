@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://use.fontawesome.com/23741fa98b.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src='../js/jquery-paginate.js'></script>
+    <title>Donors</title>
+</head>
+
+<body>
+    <div class="container">
+        <a href="/">Home / </a>
+        <a href="/receptionist">Receptionist-View</a>
+        <h1>Donors</h1>
+        <form action="/receptionist/donors" method="POST">
+            <label for="">Search by Name</label>
+            <input type="text" name="d_name" placeholder="Enter Donor's Name">
+            <select name="option1" id="">
+                <option value="or">OR</option>
+                <option value="and">AND</option>    
+            </select>
+            <label for="">Search by Blood type</label>
+            <select name="bloodType" id="">
+                <option value="A+" selected>A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O-">O-</option>
+                <option value="O+">O+</option>
+                <option value="AB-">AB-</option>
+                <option value="AB+">AB+</option>
+            </select>
+            <select name="option2" id="">
+                <option value="or" selected>OR</option>
+                <option value="and">AND</option>
+            </select>
+            <label for="">Search by Age</label>
+            <input type="number" name="d_age" id="" placeholder="Age" maxlength="3">
+            <input type="submit" value="Submit">
+        </form>
+
+        {{#if don}}
+        <!-- <span class="fa fa-database" aria-hidden="true"></span> -->
+        <div id="details">
+            <table id="myTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Gender</th>
+                        <th>Blood Type</th>
+                        <th>Age</th>
+                        <th>Phone</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each don}}
+                    <tr>
+                        <td>
+                            <input type="text" readonly name="{{donorId}}" value="{{donorId}}"> </td>
+                        <td>{{d_name}}</td>
+                        <td>{{d_address}}</td>
+                        <td>{{d_gender}}</td>
+                        <td>{{bloodType}}</td>
+                        <td>{{d_age}}</td>
+                        <td>{{d_phone}}</td>
+                        <td>
+                            <a href="/receptionist/edit/{{donorId}}">
+                                <input type="submit" value="Edit">
+                            </a>
+                        </td>
+                        <td>
+                            <a href="/receptionist/delete/{{donorId}}">
+                                <input type="submit" value="Delete">
+                            </a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+        {{else}}
+        <p>No Records Found</p>
+        {{/if}}
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#myTable').paginate({ limit: 3 });
+            $('#donors').css('display', 'none');
+        })
+
+    </script>
+</body>
+
+</html>

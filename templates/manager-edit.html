@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src='../../js/jquery-paginate.js'></script>
+</head>
+<body>
+    <div class="container">
+        <a href="/">Home / </a>
+        <a href="/manager">Manager-View / </a>
+        <a href="/manager/search">Employee-Search</a>
+        <h1>Edit Details</h1>
+        {{#each employee}}
+        <form action="/manager/edit/{{empId}}" method="POST">
+            <label for="">Employee ID</label>
+             <input type="text" readonly value="{{empId}}" name="empId">
+             <label for="">Name</label>
+             <input type="text" name="empName" value="{{empName}}" required maxlength="30">
+             <label for="">Position</label>
+             <input type="text" name="position" readonly value="{{position}}" required>
+             <label for="">Address</label>
+             <input type="text" name="empAddress" value="{{empAddress}}" required>
+             <label for="">Phone No.</label>
+             <input type="number" name="empPhone" value="{{empPhone}}" id="" required>
+             <label for="">Email</label>
+             <input type="email" name="empEmail" value="{{empEmail}}" required>
+             <input type="submit" value="Submit">
+         </form>
+        {{/each}}
+    </div>
+</body>
+</html>

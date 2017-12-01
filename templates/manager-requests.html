@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src='../js/jquery-paginate.js'></script>
+    <title>Requests</title>
+</head>
+
+<body>
+    <div class="container">
+            <a href="/">Home / </a>
+            <a href="/manager">Manager-View</a>
+        <h1>View Requests</h1>
+        {{#if requests}}
+        <table id="myTable">
+            <thead>
+                <tr>
+                    <th>Requested By</th>
+                    <th>Requested Blood Type</th>
+                    <th>Order Date</th>
+                    <th>Requested Units</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each requests}}
+                <form action="/manager/requests" method="POST">
+                <tr>
+                    <td> <input type="text" readonly name="requestedBy" value="{{requestedBy}}"></td>
+                    <td> <input type="text" readonly name="requestedBloodType" value="{{requestedBloodType}}"> </td>
+                    <td> <input type="text" readonly name="orderDate" value="{{orderDate}}"></td>
+                    <td> <input type="number" readonly name="requestedUnits" id="" value="{{requestedUnits}}"> </td>
+                    <td> <a href=""> <input type="submit" value="Approve"></a></td>
+                </tr>
+                </form>
+                {{/each}}
+            </tbody>
+        </table>
+        {{else}}
+        <p>No pending requests</p>
+        {{/if}}
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#myTable').paginate({ limit: 5 });
+        })
+
+    </script>
+</body>
+
+</html>

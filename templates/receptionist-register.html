@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <a href="/">Home / </a>
+        <a href="/receptionist">Receptionist-View</a>
+        <h1>Register a donor</h1>
+        <form action="/receptionist/register" method="POST">
+            <input type="text" name="d_name" placeholder="Donor Name" required>
+            <input type="text" name="d_address" placeholder="Address" required>
+            <select name="d_gender" id="" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <select name="bloodType" id="" required>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O-">O-</option>
+                <option value="O+">O+</option>
+                <option value="AB-">AB-</option>
+                <option value="AB+">AB+</option>
+            </select>
+            <input type="number" name="d_age" id="" placeholder="Age" required maxlength="3">
+            <input type="number" name="d_phone" id="" placeholder="Phone Number" required size="10" pattern="[0-9]">
+            <input type="submit" value="Submit">
+        </form>
+
+        <div class="donors">
+
+        </div>
+    </div>
+
+</body>
+
+</html>

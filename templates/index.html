@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Home</title>
+    <script src="https://use.fontawesome.com/23741fa98b.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="back"><span class="fa fa-heartbeat"></span></div>
+    
+    <div class="container home">
+        <!-- <div class="block"></div> -->
+        <h1>Welcome to Langara Blood Bank System</h1>
+        <h3>Please Define your Role</h3>
+        <form action="/" method="POST">
+            <select name="position" id="">
+                <option value="manager">Manager</option>
+                <option value="receptionist"> Receptionist</option>
+                <option value="hospital">Hospital(Request Blood)</option>
+            </select>
+           <input type="submit" class="fa fa-sign-in">
+        </form>
+    </div>
+<script>
+  $(document).ready(()=>{
+
+      
+     
+      $('.back').fadeIn(3000, ()=>{
+        //   $(this).css('padding-top','130px');
+      });
+  })
+</script>
+</body>
+
+</html>

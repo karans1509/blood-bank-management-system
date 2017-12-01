@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400|Source+Sans+Pro:300,400|family=Lora');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+    color: #102542;
+    background-color: #EBEBEB;
+    padding-bottom: 100px;
+}
+
+.back {
+    display: none;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 90%;
+    height: 100vh;
+    z-index: -1;
+    /* animation: move2 1s 0s ease-in 1 alternate forwards; */
+    perspective: 250px;
+}
+
+.fa.fa-heartbeat {
+    color: red;
+    font-size: 20rem;
+    margin-top: 130px;
+    margin-left: 100px;
+    z-index: -1;
+    text-shadow: 10px 10px 15px black;
+    animation: incr 1s 0s ease-in-out infinite alternate forwards;
+    /* animation: blink 1s 0s ease-in-out infinite alternate forwards; */
+}
+
+@keyframes incr {
+    0% {
+        transform: translate3d(20px, 0 , 20px);
+    }
+    100% {
+       transform: translate3d(0, 0, 0);
+    }
+}
+
+.fa.fa-database {
+    color : #fff;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@keyframes blink {
+    0% {
+        font-size: 23.5rem;
+    }
+    100% {
+        font-size: 25rem;
+    }
+
+}
+
+@keyframes move2 {
+    0% {
+        left: -300px;
+    }
+    100% {
+        left: 20px;
+        opacity: 1;
+    }
+}
+
+.home form{
+    box-shadow: none;
+    border-radius: 10px;
+    background-color: inherit;
+}
+
+.home form input[type="submit"] {
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1000px; 
+     margin: 0 auto;
+    margin-top: 0px;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', serif;
+    font-weight: normal;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 0;
+    letter-spacing: 3px;
+    padding-top: 30px;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.25rem;
+}
+
+p {
+    text-align: center;
+}
+
+a, a:visited {
+    color: #274C77;
+    color: red;
+}
+
+nav {
+    margin : 0 auto; 
+    max-width: 700px;
+}
+
+nav ul {
+   list-style-type: none;
+   padding-left: 0;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+nav ul li {
+flex-basis: 40%;
+text-align: center;
+padding : 15px 0;
+margin: 15px 10px;
+background-color:#ffffff;
+transition: transform 1s;
+box-shadow: 0px 2.5px 10px #000000;
+}
+
+nav ul li:hover{
+    transform: scale(1.1, 1.1);
+    /* background-color: #38618C; */
+} 
+
+ li a, li a:visited {
+    font-size: 1.5rem;
+    color: #222222;;
+    text-decoration: none;
+    display: block;
+    transition: color 1s;
+}
+
+/* li:hover a {
+   
+    color : #ffffff;
+} */
+
+
+table {
+    /* text-align: center; */
+    margin : 10px auto;
+    text-align: center;
+    background-color: white;
+    /* color : #ffffff; */
+    margin-top: 50px;
+    box-shadow: 0px 2.5px 10px black;
+    padding: 5%;
+    
+}
+
+table, tr, th, td {
+    border: 1px solid #102542;
+    border-collapse: collapse;
+}
+
+/* tr:nth-of-type(2n) {
+ background-color: #FFFFFF;
+ color : #38618C;
+} */
+
+table tr td, table tr th {
+    padding: 15px;
+}
+
+tr input[type="text"], tr input[type="number"] {
+    text-align: center;
+    background-color: #fff;
+    /* color : white; */
+    border: none;
+}
+
+tr input[type="submit"] {
+    cursor: pointer;
+    background-color: #fff;
+    color: red;
+    border: none;
+    text-decoration: underline;
+}
+
+form {
+    text-align: center;
+    margin : 10px auto;
+    box-shadow: 0px 2.5px 10px black;
+    max-width: 400px;
+    min-height: 200px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+form * {
+    height : 30px;
+    width : 175px;
+    display: block;
+    text-align: left;
+    margin: 0px auto;
+    margin-bottom: 15px;
+}
+
+form select {
+    text-align: center;
+    /* border: 1px solid red;; */
+}
+
+form select option {
+    text-align: center;
+    height : 30px;
+    text-align: center;
+}
+
+form p {
+    margin-top: 20px;
+}
+
+form label {
+   margin-top: 20px;
+}
+
+form input {
+}
+
+form input[type="submit"] {
+    display: block;
+    width : 75px;
+    height : 30px;
+    margin:  0px auto;
+    margin-top: 20px; 
+    background-color:#ebebeb;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 1s, color 1s;
+}
+
+form input[type="submit"]:hover {
+    background-color: red;
+    color: white;
+}
+
+.page-navigation {
+    text-align: center;
+}
+
+.page-navigation a {
+    margin: 0 2px;
+    display: inline-block;
+    padding: 3px 5px;
+    color: #102542;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+  }
+   
+  .page-navigation a[data-selected] {
+    color:white ;
+    background-color:#102542 ;
+  }
+
+  #details {
+      padding-top: 70px;
+  }
